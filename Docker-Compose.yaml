@@ -3,18 +3,32 @@ version: '3.7'
 services:
   database:
     image: postgres:14-alpine
-    container_name: auxilium-gpt-fallback-db 
+    container_name: auxilium-gpt-fallback-db
     restart: on-failure
     environment:
       - POSTGRES_PASSWORD=${PG_PASSWORD}
       - POSTGRES_USER=${PG_USERNAME}
       - POSTGRES_DB=${PG_DATABASE}
     ports:
-      - '${PG_PORT}:5432'
+      - 5432
+    volumes:
+      - db:/var/lib/postgresql/data
+
+  application:
+    container_name: auxilium-gpt-fallback-app
+    restart: on-failure
+    environment:
+      - PG_USERNAME=${PG_USERNAME}
+      - PG_PASSWORD=${PG_PASSWORD}
+      - PG_DATABASE=${PG_DATABASE}
+      - PG_PORT=5432
+    ports:
+      - 8000
+    build:
+      dockerfile: Dockerfile
     volumes:
       - db:/var/lib/postgresql/data
 
 volumes:
   db:
-    driver: local
 

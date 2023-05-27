@@ -1,0 +1,6 @@
+models
+.git
+.vscode
+.fleet
+.sublime
+Pipfile.lock

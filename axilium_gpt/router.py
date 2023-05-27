@@ -5,8 +5,9 @@ from fastapi import FastAPI
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-# from .model import model
+from .model import model
 from .models import *
+from .requests import *
 
 
 logger: Logger = getLogger("rich")
@@ -46,4 +47,17 @@ def models() -> JSONResponse:
     return JSONResponse(model.list_models())
 
 
+@app.post("/completions")
+def completions(
+        
+    ) -> JSONResponse:
+    ...
+
+
+@app.post("/chat/completions")
+def chat_completions() -> JSONResponse:
+    ...
+
+
 __all__ = ("app",)
+

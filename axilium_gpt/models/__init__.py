@@ -5,7 +5,7 @@ __all__ = (
 )
 
 
-from .base import DATABASE, CURSOR
+from .base import DATABASE
 from .message import Message
 from .user import User
 
