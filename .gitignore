@@ -1,0 +1,21 @@
+### Runtime items
+models
+!axilium_gpt/models
+
+### IDE and code editors
+.vscode
+.idea
+.fleet
+.sublime
+
+### MacOS
+.DS_Store
+
+### Python files
+dist
+build
+*.pyc
+
+### ENV files
+.env
+

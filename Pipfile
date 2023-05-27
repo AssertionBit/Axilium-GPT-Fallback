@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gpt4all = "*"
+fastapi = "*"
+rich = "*"
+uvicorn = "*"
+python-dotenv = "*"
+peewee = "*"
+psycopg2-binary = "*"
+
+[dev-packages]
+black = "*"
+isort = "*"
+mypy = "*"
+pyls = "*"
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.3"
+
+[scripts]
+dev="python app.py"
+
