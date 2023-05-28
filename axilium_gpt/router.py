@@ -18,6 +18,8 @@ async def lifespan(app: FastAPI):
     create_tables()
 
     logger.info("Starting application")
+    logger.info(f"Listening to 8000 port")
+    logger.info(f"OpenAPI docs at {app.openapi_url}")
 
     yield
 

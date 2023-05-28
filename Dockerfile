@@ -12,5 +12,7 @@ COPY . /app
 
 RUN pipenv install gpt4all
 
+EXPOSE 8000
+
 ENTRYPOINT [ "pipenv", "run", "dev" ]
 
