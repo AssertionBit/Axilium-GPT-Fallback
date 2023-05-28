@@ -10,10 +10,6 @@ RUN python3 -m pip install pipenv
 
 COPY . /app
 
-# RUN chmod +x /app/scripts/deploy.sh
-
-# RUN sh /app/scripts/deploy.sh
-
 RUN pipenv install gpt4all
 
 ENTRYPOINT [ "pipenv", "run", "dev" ]

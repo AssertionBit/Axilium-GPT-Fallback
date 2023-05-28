@@ -10,7 +10,6 @@ rich = "*"
 uvicorn = "*"
 python-dotenv = "*"
 peewee = "*"
-psycopg2-binary = "*"
 
 [dev-packages]
 black = "*"
@@ -24,3 +23,6 @@ python_full_version = "3.11.3"
 
 [scripts]
 dev="python app.py"
+sort="isort axilium_gpt"
+format="black axilium_gpt"
+

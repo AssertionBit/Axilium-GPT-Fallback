@@ -18,3 +18,16 @@ Or
 
 * `docker -f Dockerfile up -d`
 
+### Using standalone docker image
+
+To use docker image simply run this command:
+
+```sh
+docker build -f Dockerfile
+```
+
+## Warning!
+
+On first run it takes about 10 minutes to run the image! GPT4All takes some 
+    time to download a model and load it to itself.
+

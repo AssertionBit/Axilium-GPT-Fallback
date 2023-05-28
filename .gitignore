@@ -1,6 +1,7 @@
 ### Runtime items
 models
 !axilium_gpt/models
+auxilium-gpt-fallback.db
 
 ### IDE and code editors
 .vscode

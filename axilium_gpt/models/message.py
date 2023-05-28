@@ -5,10 +5,7 @@ from .base import DATABASE
 
 class Message(Model):
     class Meta:
-        database=DATABASE
+        database = DATABASE
 
 
-__all__ = (
-    "Message",
-)
-
+__all__ = ("Message",)

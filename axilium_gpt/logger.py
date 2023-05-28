@@ -2,7 +2,6 @@ from logging import basicConfig
 
 from rich.logging import RichHandler
 
-
 basicConfig(
     level="NOTSET",
     format="%(message)s",
